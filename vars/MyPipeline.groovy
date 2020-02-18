@@ -1,6 +1,6 @@
 def call(Map pipeline)
 {    
     addShortText
-        color : pipeline.ccolor,
-        text : pipeline.texting    
+        color : pipeline.color,
+        text : pipeline.text    
 }
