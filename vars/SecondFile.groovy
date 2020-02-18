@@ -1,8 +1,8 @@
-def call(Map params)
+def call(String one,String two)
 {         
     checkout([
     $class: 'GitSCM', 
-    branches: [[name: params.branch]],     
-    userRemoteConfigs: [[url: params.url]]
+    branches: [[name: ${one} ]],     
+    userRemoteConfigs: [[url: ${two}]]
     ])
 }
