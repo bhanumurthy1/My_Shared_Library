@@ -5,4 +5,5 @@ def call(Map params)
     branches: [[name: params.branch ]],     
     userRemoteConfigs: [[url: params.url]]
     ])
+    echo params.dummy
 }
