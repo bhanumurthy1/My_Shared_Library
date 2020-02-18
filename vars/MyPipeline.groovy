@@ -1,4 +1,4 @@
-def call(Map pipeline)
+def call(String Name)
 {    
-    echo "Hello World"   
+    echo "Hello World ,${Name}"   
 }
