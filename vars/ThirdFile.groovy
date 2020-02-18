@@ -11,4 +11,5 @@ def call(Map params)
         color: params.ccolor, 
         link: params.clink,
         text: params.ctext
+    build params.job
 }
