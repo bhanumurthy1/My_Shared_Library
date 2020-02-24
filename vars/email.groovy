@@ -2,8 +2,9 @@ def call(String ...toadd)
 {
   for(String temp: toadd)
   {
-    temp1=temp+" ";
+    String temp1=temp+" ";
   }
+  echo temp1
   emailext body: '''Test Mail:<br/>
   Check console output at $BUILD_URL to view the results.<br/>
   <b>Done</b>''', 
