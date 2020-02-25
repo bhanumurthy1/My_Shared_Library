@@ -1,4 +1,7 @@
-pipelineJob('Example')
+def Job = getBinding().getVariables()['Gen_Job_Name'].toString()
+def Service_Name=getBinding().getVariables()['Service_Name'].toString()
+def Stream_Name="//CDG/CDLG/Services/"+Service_Name+"/ML/"
+pipelineJob(Job)
 {   
   definition {
         cpsScm {
@@ -14,7 +17,7 @@ pipelineJob('Example')
                                       
                                       }
                 dum / workspace / spec / clobber('true')                 
-              	dum / workspace / spec / streamName('//CDG/CDLG/Services/$serviceName/ML/')
+              	dum / workspace / spec / streamName(Stream_Name)
                 
             }
                   
