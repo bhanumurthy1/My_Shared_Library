@@ -1,7 +1,7 @@
 def Job_Name = getBinding().getVariables()['Gen_Job_Name'].toString()
 def Service_Name=getBinding().getVariables()['Service_Name'].toString()
 def Stream_Name="//CDG/CDLG/Services/"+Service_Name+"/ML/"
-pipelineJob(Job)
+pipelineJob(Job_Name)
 {   
   definition {
         cpsScm {
