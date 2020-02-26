@@ -1,15 +1,14 @@
-def call(String ...toadd)
+def call(buildStatus,emailIDs)
 {
-  String temp1="";
-  for(String temp: toadd)
-  {
-    temp1=temp1+temp+" ";
-  }
-  echo temp1
-  emailext body: '''Test Mail:<br/>
-  Check console output at $BUILD_URL to view the results.<br/>
-  <b>Done</b>''', 
-  recipientProviders: [culprits()], 
-  subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS',
-  to: temp1
+  // Default values 
+  def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+  def summary = "${subject} (${env.BUILD_URL})"
+  def details = """<p>${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+    <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>"""
+   
+  print emailIDs
+  emailext body: details,
+  recipientProviders: [culprits()],
+  subject: subject,
+  to: emailIDs
 }
