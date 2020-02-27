@@ -1,4 +1,3 @@
-def Branch_Name = System.getenv('BRANCH_NAME')
 pipeline
 {
 agent any
@@ -17,6 +16,7 @@ agent any
       {
         script {
           sh ''' 
+          def Branch_Name = System.getenv('BRANCH_NAME')
           echo "The Branch Name is "
           echo $Branch_Name
         printenv          
