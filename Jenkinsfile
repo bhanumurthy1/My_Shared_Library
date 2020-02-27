@@ -16,7 +16,7 @@ agent any
       {
         script {
           sh '''
-          echo printenv.BRANCH_NAME
+         printenv BRANCH_NAME
             printenv          
           '''
         }
