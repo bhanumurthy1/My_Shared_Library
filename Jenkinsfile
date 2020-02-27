@@ -1,4 +1,4 @@
-def Branch_Name = getBinding().getVariables()['BRANCH_NAME'].toString()
+def Branch_Name = System.getenv('BRANCH_NAME')
 pipeline
 {
 agent any
