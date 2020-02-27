@@ -1,3 +1,4 @@
+def Branch_Name
 pipeline
 {
 agent any
@@ -16,6 +17,8 @@ agent any
       {
         script {
           sh '''
+          Branch_Name=env.BRANCH_NAME
+          echo ${Branch_Name}          
          printenv BRANCH_NAME
             printenv          
           '''
