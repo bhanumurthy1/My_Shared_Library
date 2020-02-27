@@ -9,7 +9,7 @@ agent any
     }
     stage("Second Stage")
     {
-      echo "Second Stage of master")
+      echo "Second Stage of master"
     }
   }
 }
