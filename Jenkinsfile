@@ -15,8 +15,7 @@ agent any
       steps
       {
         script {
-          sh '''
-        echo 'Pulling...' + env.BRANCH_NAME
+          sh '''       
         printenv          
           '''
         }
