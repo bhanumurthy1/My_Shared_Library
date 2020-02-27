@@ -5,11 +5,18 @@ agent any
   {
     stage("First Stage")
     {
-      echo "First Stage of Branch2"
+      steps
+      {
+        echo "First Stage of Branch2"
+      }
+      
     }
     stage("Second Stage")
     {
-      echo "Second Stage of Branch2"
+      steps
+      {
+        echo "Second Stage of Branch2"
+      }      
     }
   }
 }
