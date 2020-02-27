@@ -14,8 +14,9 @@ agent any
     {
       steps
       {
-        println "BRANCH_NAME = " + System.getenv('BRANCH_NAME'); 
-        echo "Second Stage of master"
+        node {
+        echo 'Pulling...' + env.BRANCH_NAME
+        }
       }      
     }
   }
