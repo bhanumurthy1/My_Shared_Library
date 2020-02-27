@@ -17,6 +17,7 @@ agent any
         script {
           sh '''
           echo env.BRANCH_NAME
+          echo scm.branches[0].name
            printenv          
           '''
         }
