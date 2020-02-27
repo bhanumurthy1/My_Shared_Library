@@ -14,8 +14,11 @@ agent any
     {
       steps
       {
-        node {
+        script {
+          sh '''
         echo 'Pulling...' + env.BRANCH_NAME
+        printenv          
+          '''
         }
       }      
     }
