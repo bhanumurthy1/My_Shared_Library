@@ -1,3 +1,4 @@
+def Branch_Name = getBinding().getVariables()['BRANCH_NAME'].toString()
 pipeline
 {
 agent any
@@ -15,7 +16,9 @@ agent any
       steps
       {
         script {
-          sh '''       
+          sh ''' 
+          echo "The Branch Name is "
+          echo $Branch_Name
         printenv          
           '''
         }
