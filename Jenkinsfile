@@ -16,6 +16,11 @@ agent any
       steps
       {
         echo "Second Stage of Branch2"
+        script {
+          sh '''       
+        printenv          
+          '''
+        }
       }      
     }
   }
