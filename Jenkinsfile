@@ -9,7 +9,7 @@ agent any
     }
     stage("Second Stage")
     {
-      echo "Second Stage of Branch2")
+      echo "Second Stage of Branch2"
     }
   }
 }
