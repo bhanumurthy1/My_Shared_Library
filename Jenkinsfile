@@ -1,4 +1,3 @@
-def Branch_Name
 pipeline
 {
 agent any
@@ -8,12 +7,7 @@ agent any
     {
       steps
       {
-        echo "First Stage of Branch2"
-        script 
-        {
-          Branch_Name=env.BRANCH_NAME
-          echo ${Branch_Name} 
-        }
+        echo "First Stage of Branch2"        
       }
       
     }
