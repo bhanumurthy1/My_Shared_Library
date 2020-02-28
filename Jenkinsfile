@@ -8,12 +8,7 @@ agent any
     {
       steps
       {
-        echo "First Stage of master"
-        script 
-        {
-          Branch_Name=env.BRANCH_NAME
-          echo ${Branch_Name} 
-        }
+        echo "First Stage of master"        
       }      
     }
     stage("Second Stage")
