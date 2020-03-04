@@ -1,4 +1,3 @@
-def BASE_NAME
 pipeline
 {
 agent any
@@ -11,7 +10,7 @@ agent any
         echo "First Stage of Branch2" 
         echo "${JOB_BASE_NAME}"  
         echo "The Job Base Name is ${env.JOB_BASE_NAME}"
-        BASE_NAME=System.getenv("JOB_BASE_NAME");
+       String BASE_NAME=System.getenv("JOB_BASE_NAME");
         echo "${BASE_NAME}"
         
       }
