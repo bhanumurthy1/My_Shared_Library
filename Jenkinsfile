@@ -1,3 +1,4 @@
+def Job_Name = getBinding().getVariables()['JOB_BASE_NAME'].toString()
 pipeline
 {
 agent any
@@ -10,8 +11,7 @@ agent any
         echo "First Stage of Branch2" 
         echo "${JOB_BASE_NAME}"  
         echo "The Job Base Name is ${env.JOB_BASE_NAME}"
-       String BASE_NAME=System.getenv("JOB_BASE_NAME");
-        echo "${BASE_NAME}"
+        echo "${Job_Name}"
         
       }
       
