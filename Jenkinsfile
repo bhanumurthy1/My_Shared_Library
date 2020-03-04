@@ -10,8 +10,8 @@ agent any
       {
         echo "First Stage of Branch2" 
         echo "${JOB_BASE_NAME}"
-        branch=${JOB_BASE_NAME}
-        echo branch
+        branch="${JOB_BASE_NAME}"
+        echo "branch"
         
       }
       
