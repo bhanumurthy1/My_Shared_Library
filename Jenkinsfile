@@ -9,7 +9,7 @@ agent any
       {
         echo "First Stage of Branch2" 
         echo "${JOB_BASE_NAME}"  
-        echo $JOB_BASE_NAME
+        echo "The build number is ${env.BUILD_NUMBER}"
         
       }
       
