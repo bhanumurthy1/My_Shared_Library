@@ -1,4 +1,4 @@
-def temp=" "
+def temp
 pipeline
 {
 agent any
