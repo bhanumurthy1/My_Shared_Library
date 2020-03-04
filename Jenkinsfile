@@ -1,3 +1,4 @@
+def temp=" "
 pipeline
 {
 agent any
@@ -9,6 +10,8 @@ agent any
       {
         echo "First Stage of Branch2" 
         echo "${JOB_BASE_NAME}"
+        temp = "${JOB_BASE_NAME}"
+        echo "temp"
       }
       
     }
