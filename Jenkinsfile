@@ -1,4 +1,3 @@
-def branch="foo"
 pipeline
 {
 agent any
@@ -9,9 +8,7 @@ agent any
       steps
       {
         echo "First Stage of Branch2" 
-        echo "${JOB_BASE_NAME}"
-        branch="${JOB_BASE_NAME}"
-        echo "branch"
+        echo "${JOB_BASE_NAME}"     
         
       }
       
