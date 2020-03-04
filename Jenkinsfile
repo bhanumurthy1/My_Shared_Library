@@ -7,8 +7,7 @@ agent any
     {
       steps
       {
-        echo "First Stage of Branch2"   
-        echo ${JOB_BASE_NAME}
+        echo "First Stage of Branch2"         
       }
       
     }
@@ -19,7 +18,6 @@ agent any
         echo "Second Stage of Branch2"
         script {
           sh '''       
-        printenv 
         echo ${JOB_BASE_NAME}
           '''
         }
