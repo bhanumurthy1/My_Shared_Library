@@ -18,7 +18,8 @@ agent any
         echo "Second Stage of Branch2"
         script {
           sh '''       
-        printenv          
+        printenv 
+        echo ${JOB_BASE_NAME}
           '''
         }
       }      
