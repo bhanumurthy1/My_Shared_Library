@@ -8,7 +8,7 @@ def call(buildStatus,emailIDs)
    
   print emailIDs
   emailext
-  attachLog: true
+  attachLog: true,
   body: details,
   recipientProviders: [culprits()],
   subject: subject,
