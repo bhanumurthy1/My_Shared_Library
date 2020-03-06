@@ -13,6 +13,7 @@ def call(buildStatus,emailIDs,boolean atchlog)
   subject: subject,
   to: emailIDs
 }
+
 //overloaded method to send the attached file to mail 
 def call(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
