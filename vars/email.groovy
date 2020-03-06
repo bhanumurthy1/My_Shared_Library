@@ -1,4 +1,4 @@
-def call(buildStatus,emailIDs,boo)
+def call(buildStatus,emailIDs)
 {
   // Default values 
   def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
@@ -8,7 +8,7 @@ def call(buildStatus,emailIDs,boo)
    
   print emailIDs
   emailext
-  attachLog: boo ,
+  attachLog: true,
   body: details,
   recipientProviders: [culprits()],
   subject: subject,
