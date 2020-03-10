@@ -10,9 +10,9 @@ def stageTest()
                     '''     
 }
 
-def stageBuild()
+def stageBuild(String JobName)
 {
-    build 'HelloWorld'
+    build JobName
 }
 def stageArchive()
 {
