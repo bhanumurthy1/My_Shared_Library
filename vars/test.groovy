@@ -1,18 +1,13 @@
 def stagecleanUp()
-{
-    script{
-    cleanWs() 
-    }
+{  
+    cleanWs()     
 }
 def stageTest()
 {   
-    script
-    {
         sh '''
                  echo "Testing stage"                   
                     pwd 
-                    ''' 
-    }
+                    '''     
 }
 
 def stageBuild()
