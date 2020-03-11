@@ -1,4 +1,5 @@
 //def modules = [:]
+import email
 def stagecleanUp()
 {  
     cleanWs()     
@@ -13,7 +14,8 @@ def stageTest()
 
 def stageBuild(String JobName)
 {
-       build JobName    
+       build JobName
+    new email().emailtest("failure","ppravallika@informatica.com",true,"")
 }
 def stageArchive()
 {
