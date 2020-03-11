@@ -1,4 +1,5 @@
 //def modules = [:]
+import email.groovy
 def stagecleanUp()
 {  
     cleanWs()     
