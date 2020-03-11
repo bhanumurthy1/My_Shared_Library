@@ -12,12 +12,7 @@ def stageTest()
 
 def stageBuild(String JobName)
 {
-    build JobName
-    Class groovyClass = new GroovyClassLoader(getClass().getClassLoader()).parseClass("email.groovy");
-GroovyObject myObject = (GroovyObject) groovyClass.newInstance();
-    //GroovyShell shell = new GroovyShell()
-    //def tools = shell.parse(new File('email.groovy'))    
-    myObject.call("Failure","ppravallika@informatica.com",true,"")
+    build JobName    
 }
 def stageArchive()
 {
