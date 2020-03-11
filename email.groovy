@@ -1,3 +1,5 @@
+class email
+{
 def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
   // Default values 
@@ -15,6 +17,7 @@ def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
   to: emailIDs 
 
 }
-  return this;
+}
+  
 
 
