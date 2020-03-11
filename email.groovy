@@ -12,9 +12,9 @@ def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
   body: details,
   recipientProviders: [culprits()],
   subject: subject,
-  to: emailIDs
-  
-  return this
+  to: emailIDs 
+
 }
+  return this;
 
 
