@@ -1,5 +1,3 @@
-class email
-{
 def call(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
   // Default values 
@@ -16,5 +14,5 @@ def call(buildStatus,emailIDs,boolean atchlog,atchfile)
   subject: subject,
   to: emailIDs
 }
-}
+
 
