@@ -1,4 +1,4 @@
-def modules = [:]
+//def modules = [:]
 def stagecleanUp()
 {  
     cleanWs()     
@@ -13,8 +13,8 @@ def stageTest()
 
 def stageBuild(String JobName)
 {
-    modules.first = load 'email.groovy'
-    modules.first.emailtest("failure","ppravallika@informatica.com",true,"")
+    //modules.first = load 'email.groovy'
+   // modules.first.emailtest("failure","ppravallika@informatica.com",true,"")
     build JobName    
 }
 def stageArchive()
