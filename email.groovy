@@ -1,4 +1,4 @@
-def call(buildStatus,emailIDs,boolean atchlog,atchfile)
+def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
   // Default values 
   def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
@@ -13,6 +13,8 @@ def call(buildStatus,emailIDs,boolean atchlog,atchfile)
   recipientProviders: [culprits()],
   subject: subject,
   to: emailIDs
+  
+  return this
 }
 
-© 2020 GitHub
+
