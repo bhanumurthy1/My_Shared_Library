@@ -18,6 +18,6 @@ def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
 
 }
 }
-  
+return this
 
 
