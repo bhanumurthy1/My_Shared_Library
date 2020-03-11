@@ -1,3 +1,5 @@
+class email
+{
 def call(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
   // Default values 
@@ -13,5 +15,6 @@ def call(buildStatus,emailIDs,boolean atchlog,atchfile)
   recipientProviders: [culprits()],
   subject: subject,
   to: emailIDs
+}
 }
 
