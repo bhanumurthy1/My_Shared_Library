@@ -1,5 +1,5 @@
 //def modules = [:]
-import email
+
 def stagecleanUp()
 {  
     cleanWs()     
