@@ -1,5 +1,3 @@
-//def modules = [:]
-
 def stagecleanUp()
 {  
     cleanWs()     
@@ -7,15 +5,13 @@ def stagecleanUp()
 def stageTest()
 {   
         sh '''
-                 echo "Testing stage"                   
-                    pwd 
-                    '''     
+            echo "Testing stage"                   
+             pwd 
+           '''     
 }
-
 def stageBuild(String JobName)
 {
-       build JobName
-    
+       build JobName    
 }
 def stageArchive()
 {
@@ -27,9 +23,8 @@ def stagePost()
 {
     sh '''
     echo "failure"    
-    '''
-    emailtest("failure","ppravallika@informatica.com",true,"")
-    
+    '''     
+    emailtest("failure","ppravallika@informatica.com",true,"")    
 }
 def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
 {
@@ -46,6 +41,5 @@ def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
   recipientProviders: [culprits()],
   subject: subject,
   to: emailIDs 
-
 }
 return this;
