@@ -6,5 +6,7 @@ def call(String vars)
     {
       echo "hey function"
     }
+    email()
   '''
+  
 }
