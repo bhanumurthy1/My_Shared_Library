@@ -1,7 +1,7 @@
 def call(String vars)
 { 
   sh '''
-    echo "${vars}"
+    echo \${vars}
     echo ${somevar}
     //java ${somevar}
   '''
