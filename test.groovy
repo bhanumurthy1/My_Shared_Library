@@ -15,7 +15,7 @@ def stageTest()
 def stageBuild(String JobName)
 {
        build JobName
-    emailtest("failure","ppravallika@informatica.com",true,"")
+    
 }
 def stageArchive()
 {
@@ -26,8 +26,9 @@ def stageArchive()
 def stagePost()
 {
     sh '''
-    echo "failure"
+    echo "failure"    
     '''
+    emailtest("failure","ppravallika@informatica.com",true,"")
     
 }
 def emailtest(buildStatus,emailIDs,boolean atchlog,atchfile)
