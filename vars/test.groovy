@@ -7,7 +7,7 @@ def call(String vars)
       echo "hey function"
       echo $1
     }
-    email("build compile")
+    email "build compile"
   '''
   
 }
