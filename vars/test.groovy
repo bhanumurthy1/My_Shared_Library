@@ -2,12 +2,12 @@ def call(String vars)
 { 
   String somevar=vars
   sh '''
-    email(Stung)
+    email()
     {
       echo "hey function"
-      echo ${Stung}
+      echo $1
     }
-    email("bjfv")
+    email("build compile")
   '''
   
 }
