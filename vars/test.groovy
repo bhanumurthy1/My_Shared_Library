@@ -1,29 +1,21 @@
-def stagecleanUp()
-{  
-    cleanWs()     
-}
-def stageTest()
-{   
-        sh '''
-                 echo "Testing stage"                   
-                    pwd 
-                    '''     
-}
-
-def stageBuild()
+pipeline
 {
-    build 'HelloWorld'
+  agent any
+  stages
+  {
+    stage("first")
+    {
+      steps
+      {
+        echo "first stage"
+      }
+    }
+    stage("second")
+    {
+      steps
+      {
+        echo "second stage"
+      }
+    }
+  }
 }
-def stageArchive()
-{
-    sh '''
-    echo "Archiving the artifacts"
-    '''
-}
-def stagePost()
-{
-    sh '''
-    echo "failure"
-    '''
-}
-return this;
