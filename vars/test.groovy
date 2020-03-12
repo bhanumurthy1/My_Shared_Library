@@ -6,8 +6,9 @@ def call(String vars)
     {
       echo "hey function"
       echo $1
+      java $2
     }
-    email "build compile"
+    email "build compile" "-version"
   '''
   
 }
