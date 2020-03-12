@@ -2,6 +2,6 @@ def call(String vars)
 {
   somevar=vars
   sh '''
-    java $somevar
+    java ${somevar}
   '''
 }
