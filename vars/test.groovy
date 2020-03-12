@@ -1,3 +1,6 @@
+
+def test()
+{
 pipeline
 {
   agent any
@@ -18,4 +21,5 @@ pipeline
       }
     }
   }
+}
 }
