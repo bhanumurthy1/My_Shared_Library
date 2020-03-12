@@ -1,6 +1,6 @@
 def call(String vars)
 {
   sh '''
-    vars
+    java $vars
   '''
 }
