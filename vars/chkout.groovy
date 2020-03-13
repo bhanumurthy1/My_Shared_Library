@@ -5,9 +5,8 @@ def call(String WSName,String StreamName)
   
   checkout perforce(credential: Credentials,
                     populate: forceClean(have: true, parallel: [enable: false, minbytes: '1024', minfiles: '1', threads: '4'], pin: '', quiet: true),
-                    workspace: manualSpec(charset: 'none', cleanup: false, name: jenkins-${NODE_NAME}-${JOB_NAME}-${EXECUTOR_NUMBER}, pinHost: false,
+                    workspace: manualSpec(charset: 'none', cleanup: false, name: 'jenkins-${NODE_NAME}-${JOB_NAME}-${EXECUTOR_NUMBER}', pinHost: false,
                     spec: clientSpec(allwrite: false, backup: true, changeView: '', clobber: true, compress: false, line: 'LOCAL',
-                    locked: false, modtime: false, rmdir: false, serverID: '', streamName: //CDG/CCGF/Services/model-service/ML,
-                                                           type: 'WRITABLE', view: ''))) 
+                    locked: false, modtime: false, rmdir: false, serverID: '', streamName: "//CDG/CCGF/Services/model-service/ML", type: 'WRITABLE', view: ''))) 
   
 }
