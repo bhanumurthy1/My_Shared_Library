@@ -1,7 +1,7 @@
 def call(String bCommand)
 {  
-    env.temp=bCommand 
-    withEnv(["buildCommand=${env.temp}"]) {
+    env.tempvar=bCommand 
+    withEnv(["buildCommand=${env.tempvar}"]) {
     echo "buildCommand =${env.buildCommand}"      
       sh """
       java $buildCommand
