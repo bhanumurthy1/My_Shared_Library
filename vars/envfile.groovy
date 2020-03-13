@@ -1,8 +1,8 @@
 def call(String bCommand)
 {
-  environment
+  script
   {
-    buildCommand=bCommand
+    env.buildCommand=bCommand
   }  
  // env.buildCommand=bCommand
   sh '''
