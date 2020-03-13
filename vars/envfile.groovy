@@ -1,13 +1,12 @@
 def call(String bCommand)
 {
-  script
+  environment
   {
-    echo bCommand
-    env.buildCommand=bCommand
-  }
+    buildCommand=bCommand
+  }  
  // env.buildCommand=bCommand
   sh '''
   echo $buildCommand
-  echo \$bCommand
+  echo $bCommand
 '''
 }
