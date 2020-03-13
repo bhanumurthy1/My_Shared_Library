@@ -2,10 +2,11 @@ def call(String bCommand)
 {  
     env.temp=bCommand 
   withEnv(["buildCommand=${env.temp}"]) {
-    echo "buildCommand =${env.buildCommand}"
-    echo buildCommand  
+    echo "buildCommand =${env.buildCommand}"     
      sh "echo $buildCommand"
-      sh "java $buildCommand"
+      sh """
+      java $buildCommand
+      """
     }   
 }
 
