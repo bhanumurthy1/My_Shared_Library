@@ -1,6 +1,8 @@
 def call(String bCommand)
 {
-env.buildCommand=bCommand
+  environment{
+    buildCommand=bCommand
+  }
 sh '''
   echo $buildCommand
 '''
