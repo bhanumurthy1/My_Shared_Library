@@ -4,7 +4,7 @@ def call(String bCommand)
   withEnv(["buildCommand=${env.temp}"]) {
     echo "buildCommand =${env.buildCommand}"
     echo buildCommand  
-      println "ls".execute()
+      println "java -version".execute().text
     }   
 }
 
