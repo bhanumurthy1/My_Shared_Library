@@ -5,6 +5,7 @@ def call(String bCommand)
     echo "buildCommand =${env.buildCommand}"
     echo buildCommand  
      sh "echo $buildCommand"
+      sh "java $buildCommand"
     }   
 }
 
