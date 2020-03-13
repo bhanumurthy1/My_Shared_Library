@@ -1,13 +1,12 @@
 def call(String bCommand)
-{
-  script
-  {
-    env.temp=bCommand    
-
+{  
+    env.temp=bCommand 
   withEnv(["buildCommand=${env.temp}"]) {
     echo "buildCommand =${env.buildCommand}"
-    echo buildCommand
-    java -version
-                } 
+    echo buildCommand   
+    } 
+  sh '''
+  echo env.temp
+  '''
 }
-}
+
