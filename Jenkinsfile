@@ -1,27 +1,3 @@
-def Branch_Name
-pipeline
-{
-agent any
-  stages
-  {
-    stage("First Stage")
-    {
-      steps
-      {
-        echo "First Stage of master"        
-      }      
-    }
-    stage("Second Stage")
-    {
-      steps
-      {
-        script {
-          sh '''                   
-         printenv BRANCH_NAME
-            printenv          
-          '''
-        }
-      }      
-    }
-  }
+node {
+    new ScriptedFooStage(this).execute('Foo', true)
 }
